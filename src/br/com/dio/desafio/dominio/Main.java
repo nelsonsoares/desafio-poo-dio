@@ -4,15 +4,23 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        Curso curso1 = new Curso("Photoshop", "Curso para Social Media", 12);
-        Curso curso2 = new Curso("Figma", "Curso para Design de Sites", 23);
+        Conteudo curso1 = new Curso(12);
+        curso1.setTitulo("Photoshop");
+        curso1.setDescricao("Curso para Social Media");
+
+        Conteudo curso2 = new Curso(23);
+        curso2.setTitulo("Figma");
+        curso2.setDescricao("Curso para Design de Sites");
 
         System.out.println(curso1 + "\n" + curso2 + "\n");
 
-        Mentoria mentoria1 = new Mentoria("Mentoria para Novos Designers",
-                "Captação Inteligente de Clientes", LocalDate.now());
-        Mentoria mentoria2 = new Mentoria("Mentoria para Precificação",
-                "Como Precificar seus Projetos", LocalDate.now());
+        Conteudo mentoria1 = new Mentoria(LocalDate.now());
+        mentoria1.setTitulo("Mentoria para Novos Designers");
+        mentoria1.setDescricao("Captação Inteligente de Clientes");
+
+        Conteudo mentoria2 = new Mentoria(LocalDate.now());
+        mentoria2.setTitulo("Mentoria para Precificação");
+        mentoria2.setDescricao("Como Precificar seus Projetos");
 
         System.out.println(mentoria1 + "\n" + mentoria2);
     }
