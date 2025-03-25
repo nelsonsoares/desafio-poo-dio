@@ -8,10 +8,6 @@ public class Curso extends Conteudo{
     public Curso() {
     }
 
-    public Curso(int cargaHoraria) {
-        this.cargaHoraria = cargaHoraria;
-    }
-
     @Override
     public double calcularXp() {
         return XP_PADRAO + cargaHoraria;
